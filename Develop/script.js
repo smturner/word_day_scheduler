@@ -26,6 +26,26 @@ $("#time3 .color-block").val(localStorage.getItem("time3"))
 $("#time4 .color-block").val(localStorage.getItem("time4"))
 $("#time5 .color-block").val(localStorage.getItem("time5"))
 
+function colorBlock(){
+    var eachHour =$(this).parent().attr("id")
+    console.log(eachHour)
+    if (eachHour < timeNow){
+        $(this).removeClass("present"),
+        $(this).removeClass("future"),
+        $(this).addClass("past");
+    }
+    
+//     else if (eachHour === timeNow){
+//         $(this).addClass("present"),
+//         $(this).removeClass("future"),
+//         $(this).removeClass("past");
+//     }
+//     else {
+//         $(this).removeClass("present"),
+//         $(this).addClass("future"),
+//         $(this).removeClass("past");
+//     }
+// }
 
 
 
@@ -53,22 +73,6 @@ $("#time5 .color-block").val(localStorage.getItem("time5"))
 
 
 
-// $(document).ready(function () {// tells engine to load 1)html & 2)css first.
-//     //display current day & time.
-//     $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); // use of moment.js
-//     //assign saveBtn click listener for user input and time stamp??
-//     $(".saveBtn").on("click", function () {
-//         //get nearby values.
-//         console.log("save");
-//         var text =JSON.parse(localStorage.getItem(".description"))
-//         // var text = $(this).parent(".description").val(); // taken the change from the sibling html description attribute
-//         var time= JSON.parse(localStorage.getItem("time-block"))
-//         // var time = $(this).parent().attr("id"); // taken the change from the parent html id attribute
-
-//         //set items in local storage.
-//         localStorage.setItem(time, text);
-
-   
 
 // })
 
