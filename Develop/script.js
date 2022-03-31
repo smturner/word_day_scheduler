@@ -15,6 +15,7 @@ console.log(timeNow)
     localStorage.setItem(timeKey, textValue)
  });
 
+
 //how the data stays on the screen
 $("#time9 .color-block").val(localStorage.getItem("time9"))
 $("#time10 .color-block").val(localStorage.getItem("time10"))
