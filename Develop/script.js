@@ -62,26 +62,28 @@ $("#time17 .color-block").val(localStorage.getItem("time17"))
 //         $(this).removeClass(".past");
 //     }
 // })
-    $(".color-block").each(function (){
-        var eachHour =$(this).parent().attr("id")
-        if (eachHour > timeNow){
-            console.log("yay")
-            $(this).removeClass(".present"),
-            $(this).addClass(".future"),
-            $(this).removeClass(".past");
-        }
-     else if (eachHour === timeNow){
-        $(this).addClass("present"),
-        $(this).removeClass("future"),
-        $(this).removeClass("past");
-    }
-    else {
-        $(this).removeClass("present"),
-        $(this).addClass("future"),
-        $(this).removeClass("past");
-    }
-}
-)
+//     $(".color-block").each(function (){
+//         var eachHour =$(this).parent().attr("id")
+//         if (eachHour > timeNow){
+//             console.log ("future")
+//             $(this).removeClass(".present"),
+//             $(this).addClass(".future"),
+//             $(this).removeClass(".past");
+//         }
+//      else if (eachHour === timeNow){
+//          console.log(present)
+//         $(this).addClass("present"),
+//         $(this).removeClass("future"),
+//         $(this).removeClass("past");
+//     }
+//     else if (eachHour<timeNow) {
+//         console.log("past")
+//         $(this).removeClass("present"),
+//         $(this).addClass("future"),
+//         $(this).removeClass("past");
+//     }
+// }
+// )
 
 
 
