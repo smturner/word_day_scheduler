@@ -1,18 +1,132 @@
-var timeBlock= $(".time-block");
-console.log (timeBlock)
-var currentDay = moment()
-// document.getElementById("currentDay")
-// currentDay=moment()
-console.log(currentDay)
-$("#currentDay").text(currentDay.format('dddd, MMMM Do'));
+var saveBtn =$(".saveBtn");
 
-var timeNow= moment().hour();
-console.log(timeNow)
 
-if (timeNow<timeBlock) {
-    console.log("green")
 
-}else if (timeNow===timeBlock)
+
+
+// $(document).ready(function () {// tells engine to load 1)html & 2)css first.
+//     //display current day & time.
+//     $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); // use of moment.js
+//     //assign saveBtn click listener for user input and time stamp??
+//     $(".saveBtn").on("click", function () {
+//         //get nearby values.
+//         console.log("save");
+//         var text =JSON.parse(localStorage.getItem(".description"))
+//         // var text = $(this).parent(".description").val(); // taken the change from the sibling html description attribute
+//         var time= JSON.parse(localStorage.getItem("time-block"))
+//         // var time = $(this).parent().attr("id"); // taken the change from the parent html id attribute
+
+//         //set items in local storage.
+//         localStorage.setItem(time, text);
+//     })
+//     //load any saved data from LocalStorage - do this for each hour created. Should follow html 24 hour to 12 hour conversion.
+//     $("#hour9 .description").val(localStorage.getItem("hour9"));
+//     $("#hour10 .description").val(localStorage.getItem("hour10"));
+//     $("#hour11 .description").val(localStorage.getItem("hour11"));
+//     $("#hour12 .description").val(localStorage.getItem("hour12"));
+//     $("#hour1 .description").val(localStorage.getItem("hour1"));
+//     $("#hour2 .description").val(localStorage.getItem("hour2"));
+//     $("#hour3 .description").val(localStorage.getItem("hour3"));
+//     $("#hour4 .description").val(localStorage.getItem("hour4"));
+//     $("#hour5 .description").val(localStorage.getItem("hour5"));
+   
+
+// })
+
+//     function hourTracker() {
+//         //get current number of hours.
+//         var currentHour = moment().hour(); // use of moment.js
+
+//         // loop over time blocks
+//         $(".time-block").each(function () {
+//             var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+//             console.log( blockHour, currentHour)
+
+//             //check if we've moved past this time, click into css/html given classes of past, present, or future
+//             if (blockHour < currentHour) {
+//                 $(this).addClass("past");
+//                 $(this).removeClass("future");
+//                 $(this).removeClass("present");
+//             }
+//             else if (blockHour === currentHour) {
+//                 $(this).removeClass("past");
+//                 $(this).addClass("present");
+//                 $(this).removeClass("future");
+//             }
+//             else {
+//                 $(this).removeClass("present");
+//                 $(this).removeClass("past");
+//                 $(this).addClass("future");
+//             }
+//         })
+//     }
+//     hourTracker(); //re-run function
+// })
+
+
+
+
+
+// // var timeBlock= $("hour");
+// // console.log (timeBlock)
+
+// // console.log(saveBtn)
+// // var description= localStorage.getItem("description");
+// // console.log(description);
+
+
+// // var currentDay = moment()
+// // console.log(currentDay)
+// // $("#currentDay").text(currentDay.format('dddd, MMMM Do'));
+
+// // $(".saveBtn").on("click", function () {
+// //     //get nearby values.
+// //     console.log(this);
+// //     var text = $(this).siblings(".description").val(); // taken the change from the sibling html description attribute
+// //     var time = $(this).parent().attr("id"); //
+
+// // var description= localStorage.getItem("descrption");
+// // localStorage.setItem ("description", "event")
+
+
+
+// // // $(document).ready(function () {
+// // function savedItem() {
+// //     var description = localStorage.getItem ("description");
+// //     localStorage.setItem("event", description)
+// // }
+// //     var saveBtn = $('.saveBtn');
+// //     //   saveBtn.hide();
+// //     $('.saveBtn').click(function (e) {
+// //         saveBtn.animate({
+// //             'opacity': 'toggle'
+// //         });
+// //     // });
+// // });
+// // $(saveBtn).on("click", function saveEvent(){
+// //     alert("helloworld")
+//     // var initials = initialsEl.value.trim();
+//     // if (initials !== "") {
+//     //   var highscores =
+//     //     JSON.parse(localStorage.getItem("highscores")) || [];
+//     //   var newScore = {
+//     //     score: timerSec,
+//     //     initials: initials
+//     //   };
+//     //   highscores.push(newScore);
+//     //   localStorage.setItem("highscores", JSON.stringify(highscores));
+//     //   renderHighScore ()
+//     // }
+//     // })
+
+
+// var timeNow= moment().hour();
+// console.log(timeNow)
+
+// if (timeNow<timeBlock) {
+//     console.log("green")
+
+// }else if (timeNow===timeBlock)
 
 // function setColors()
    
