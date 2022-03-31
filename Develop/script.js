@@ -1,12 +1,46 @@
-
+var timeBlock= $(".time-block");
+console.log (timeBlock)
 var currentDay = moment()
 // document.getElementById("currentDay")
 // currentDay=moment()
 console.log(currentDay)
-$("#currentDay").text(currentDay.format('dddd, MMMM Do YYYY'));
-// var today = moment()
-// console.log(today)
-// $("#currentDay").text(today.format("MMM Do, YYYY"));
+$("#currentDay").text(currentDay.format('dddd, MMMM Do'));
+
+var timeNow= moment().hour();
+console.log(timeNow)
+
+if (timeNow<timeBlock) {
+    console.log("green")
+
+}else if (timeNow===timeBlock)
+
+// function setColors()
+   
+    
+// if (timeNow > timeBlock){
+//     console.log(green)
+// }
+    
+// function setColor() {
+//     var b = new Date();
+//     var bNow = b.getHours();
+//     if (bNow >= 9 && bNow < 10) {
+//         taskNineInput.addClass("present")
+//     }
+// } setColor()
+    
+
+
+//if current hour > time block hour set it to past
+    //else if current hour === time block hour set it to present
+    //else set time blocks to future
+
+
+// var saveBtn = $(".saveBtn");
+// saveBtn.on("click", function (){
+//     var text =$(this).siblings(".description").val();
+//     var time =$(this).parent().attr("id");
+// })
 
 //the point of this assignment is using the bootstrap and figuring out the logic for javascript
 // make sure all the links to CDNs are working properly

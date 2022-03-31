@@ -33,7 +33,7 @@ textarea {
 }
 /* used */
 .row{
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
   height: 80px;
   border-top: 1px solid white;
 }
