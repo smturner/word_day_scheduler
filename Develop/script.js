@@ -1,5 +1,12 @@
 
-
+var currentDay = moment()
+// document.getElementById("currentDay")
+// currentDay=moment()
+console.log(currentDay)
+$("#currentDay").text(currentDay.format('dddd, MMMM Do YYYY'));
+// var today = moment()
+// console.log(today)
+// $("#currentDay").text(today.format("MMM Do, YYYY"));
 
 //the point of this assignment is using the bootstrap and figuring out the logic for javascript
 // make sure all the links to CDNs are working properly
