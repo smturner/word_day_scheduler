@@ -1,5 +1,62 @@
 var saveBtn =$(".saveBtn");
 
+ var currentDay = moment()
+ console.log(currentDay)
+$("#currentDay").text(currentDay.format('dddd, MMMM Do'));
+
+
+var timeNow= moment().hour();
+console.log(timeNow)
+
+
+
+var inputGroup =$(".description");
+
+ $(".saveBtn").on("click", function () {
+    var textValue =$(this).siblings(".color-block").val()
+    var timeKey = $(this).parent().attr("id")
+    localStorage.setItem(timeKey, textValue)
+ });
+  
+$("#time9 .color-block").val(localStorage.getItem("time9"))
+$("#time9 .color-block").val(localStorage.getItem("time9"))
+
+$("#time9 .color-block").val(localStorage.getItem("time9"))
+
+
+
+    //  preventDefult();
+    // var inputGroup= textElement.val();
+    // localStorage.setItem("entry", JSON.stringify(saveItem));
+    // var time= $(this).siblings(".hour").text();
+    // var description= $(this).siblings(".description").val();
+    // console.log(description);
+    // console.log(time);
+
+
+   
+//  localStorage.setItem (time, description);
+// //  console.log (time, description)
+
+
+//  function usePlanner() {
+
+//     $(".hour").each(function() {
+//         var currHour = $(this).text();
+//         var currPlan = localStorage.getItem(currHour);
+
+//         // console.log(this);
+//         // console.log(currHour);
+
+//         if(currPlan !== null) {
+//             $(this).siblings(".plan").val(currPlan);
+//         }
+//     });
+// }
+
+// usePlanner();
+
+
 
 
 
@@ -75,18 +132,8 @@ var saveBtn =$(".saveBtn");
 // // console.log(description);
 
 
-// // var currentDay = moment()
-// // console.log(currentDay)
-// // $("#currentDay").text(currentDay.format('dddd, MMMM Do'));
 
-// // $(".saveBtn").on("click", function () {
-// //     //get nearby values.
-// //     console.log(this);
-// //     var text = $(this).siblings(".description").val(); // taken the change from the sibling html description attribute
-// //     var time = $(this).parent().attr("id"); //
 
-// // var description= localStorage.getItem("descrption");
-// // localStorage.setItem ("description", "event")
 
 
 
