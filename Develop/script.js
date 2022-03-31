@@ -1,42 +1,34 @@
 var saveBtn =$(".saveBtn");
-
+//tells the current date
  var currentDay = moment()
  console.log(currentDay)
 $("#currentDay").text(currentDay.format('dddd, MMMM Do'));
 
-
+//tells the current hour
 var timeNow= moment().hour();
 console.log(timeNow)
-
-
-
-var inputGroup =$(".description");
-
+ 
+//save button which stores the data to the local storage
  $(".saveBtn").on("click", function () {
     var textValue =$(this).siblings(".color-block").val()
     var timeKey = $(this).parent().attr("id")
     localStorage.setItem(timeKey, textValue)
  });
-  
+
+//how the data stays on the screen
 $("#time9 .color-block").val(localStorage.getItem("time9"))
-$("#time9 .color-block").val(localStorage.getItem("time9"))
-
-$("#time9 .color-block").val(localStorage.getItem("time9"))
-
-
-
-    //  preventDefult();
-    // var inputGroup= textElement.val();
-    // localStorage.setItem("entry", JSON.stringify(saveItem));
-    // var time= $(this).siblings(".hour").text();
-    // var description= $(this).siblings(".description").val();
-    // console.log(description);
-    // console.log(time);
+$("#time10 .color-block").val(localStorage.getItem("time10"))
+$("#time11 .color-block").val(localStorage.getItem("time11"))
+$("#time12 .color-block").val(localStorage.getItem("time12"))
+$("#time1 .color-block").val(localStorage.getItem("time1"))
+$("#time2 .color-block").val(localStorage.getItem("time2"))
+$("#time3 .color-block").val(localStorage.getItem("time3"))
+$("#time4 .color-block").val(localStorage.getItem("time4"))
+$("#time5 .color-block").val(localStorage.getItem("time5"))
 
 
-   
-//  localStorage.setItem (time, description);
-// //  console.log (time, description)
+
+
 
 
 //  function usePlanner() {
@@ -75,17 +67,7 @@ $("#time9 .color-block").val(localStorage.getItem("time9"))
 
 //         //set items in local storage.
 //         localStorage.setItem(time, text);
-//     })
-//     //load any saved data from LocalStorage - do this for each hour created. Should follow html 24 hour to 12 hour conversion.
-//     $("#hour9 .description").val(localStorage.getItem("hour9"));
-//     $("#hour10 .description").val(localStorage.getItem("hour10"));
-//     $("#hour11 .description").val(localStorage.getItem("hour11"));
-//     $("#hour12 .description").val(localStorage.getItem("hour12"));
-//     $("#hour1 .description").val(localStorage.getItem("hour1"));
-//     $("#hour2 .description").val(localStorage.getItem("hour2"));
-//     $("#hour3 .description").val(localStorage.getItem("hour3"));
-//     $("#hour4 .description").val(localStorage.getItem("hour4"));
-//     $("#hour5 .description").val(localStorage.getItem("hour5"));
+
    
 
 // })
