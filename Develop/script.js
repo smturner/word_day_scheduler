@@ -20,33 +20,68 @@ $("#time9 .color-block").val(localStorage.getItem("time9"))
 $("#time10 .color-block").val(localStorage.getItem("time10"))
 $("#time11 .color-block").val(localStorage.getItem("time11"))
 $("#time12 .color-block").val(localStorage.getItem("time12"))
-$("#time1 .color-block").val(localStorage.getItem("time1"))
-$("#time2 .color-block").val(localStorage.getItem("time2"))
-$("#time3 .color-block").val(localStorage.getItem("time3"))
-$("#time4 .color-block").val(localStorage.getItem("time4"))
-$("#time5 .color-block").val(localStorage.getItem("time5"))
+$("#time13 .color-block").val(localStorage.getItem("time13"))
+$("#time14 .color-block").val(localStorage.getItem("time14"))
+$("#time15 .color-block").val(localStorage.getItem("time15"))
+$("#time16 .color-block").val(localStorage.getItem("time16"))
+$("#time17 .color-block").val(localStorage.getItem("time17"))
 
-function colorBlock(){
-    var eachHour =$(this).parent().attr("id")
-    console.log(eachHour)
-    if (eachHour < timeNow){
-        $(this).removeClass("present"),
-        $(this).removeClass("future"),
-        $(this).addClass("past");
-    }
+
+
+// $(".color-block").each(function(){
+//     //create variable for if statement to match number in id
+//     var divHour = $(this).parent().attr("id")
+//     //if text area is within the same hour as actual time set class to .present
+//     if (divHour == timeNow){
+//         console.log("time")
+//         //remove other classes from <textarea>
+//         $(this).removeClass("future")
+//         $(this).removeClass("past")
+//         // add class present to <textarea>
+//         $(this).addClass("present")
+//     }
+// })
+// $(".color-block").each(function (){
+//     var eachHour =$(this).parent().attr("id")
     
-//     else if (eachHour === timeNow){
-//         $(this).addClass("present"),
-//         $(this).removeClass("future"),
-//         $(this).removeClass("past");
+//     if (eachHour < timeNow){
+//         console.log("yay")
+        
+//         $(this).removeClass(".present"),
+//         $(this).removeClass(".future"),
+//         $(this).addClass(".past");
 //     }
-//     else {
-//         $(this).removeClass("present"),
-//         $(this).addClass("future"),
-//         $(this).removeClass("past");
-//     }
-// }
+// })
+    
 
+// $(".color-block").each(function (){
+//     var eachHour =$(this).parent().attr("id")
+//     if (eachHour === timeNow){
+//         $(this).addClass(".present"),
+//         $(this).removeClass(".future"),
+//         $(this).removeClass(".past");
+//     }
+// })
+    $(".color-block").each(function (){
+        var eachHour =$(this).parent().attr("id")
+        if (eachHour > timeNow){
+            console.log("yay")
+            $(this).removeClass(".present"),
+            $(this).addClass(".future"),
+            $(this).removeClass(".past");
+        }
+     else if (eachHour === timeNow){
+        $(this).addClass("present"),
+        $(this).removeClass("future"),
+        $(this).removeClass("past");
+    }
+    else {
+        $(this).removeClass("present"),
+        $(this).addClass("future"),
+        $(this).removeClass("past");
+    }
+}
+)
 
 
 
