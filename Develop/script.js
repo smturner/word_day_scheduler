@@ -1,25 +1,19 @@
+//variable for save button
 var saveBtn =$(".saveBtn");
 //tells the current date
  var currentDay = moment()
- console.log(currentDay)
 $("#currentDay").text(currentDay.format('dddd, MMMM Do'));
 
 //tells the current hour
-// var timeNow= moment().hour();
-var timeNow= 13;
-console.log(timeNow)
+var timeNow= moment().hour();
 
 //save button which stores the data to the local storage
  $(".saveBtn").on("click", function () {
      console.log(this)
      console.log(notevent.target)
     var textValue =$(this).siblings(".color-block").val()
-    var timeKey = $(this).parent().attr("id")
-    // var textAreaId = timeKey.split("time")
-    
-    // console.log (textAreaId[1])
+    var timeKey = $(this).parent().attr("id")    
     localStorage.setItem(timeKey, textValue)
-    // $(".saveBtn").hover(handlerIn, handlerOut)
  });
 
 
@@ -34,62 +28,17 @@ $("#time15 .color-block").val(localStorage.getItem("time15"))
 $("#time16 .color-block").val(localStorage.getItem("time16"))
 $("#time17 .color-block").val(localStorage.getItem("time17"))
 
-
-
-// $(".color-block").each(function(){
-//     //create variable for if statement to match number in id
-//     var divHour = $(this).parent().attr("id")
-//     //if text area is within the same hour as actual time set class to .present
-//     if (divHour == timeNow){
-//         console.log("time")
-//         //remove other classes from <textarea>
-//         $(this).removeClass("future")
-//         $(this).removeClass("past")
-//         // add class present to <textarea>
-//         $(this).addClass("present")
-//     }
-// })
-// $(".color-block").each(function (){
-//     var eachHour =$(this).parent().attr("id")
-    
-//     if (eachHour < timeNow){
-//         console.log("yay")
-        
-//         $(this).removeClass(".present"),
-//         $(this).removeClass(".future"),
-//         $(this).addClass(".past");
-//     }
-// })
-    
-
-// $(".color-block").each(function (){
-//     var eachHour =$(this).parent().attr("id")
-//     if (eachHour === timeNow){
-//         $(this).addClass(".present"),
-//         $(this).removeClass(".future"),
-//         $(this).removeClass(".past");
-//     }
-// })
+//function to color code the time blocks
     $(".color-block").each(function (){
-        // var eachHour =$(this).parent().attr("id")
         var timeKey = $(this).parent().attr("id")
         var eachHour = timeKey.split("time")
         if (eachHour[1] > timeNow){
-            console.log ("future")
-            // $(this).removeClass(".present"),
             $(this).addClass("future");
-            // $(this).removeClass(".past");
         }
      else if (eachHour[1] == timeNow){
-        //  console.log(present)
         $(this).addClass("present");
-        // $(this).removeClass("future"),
-        // $(this).removeClass("past");
     }
     else if (eachHour[1]<timeNow) {
-        // console.log("past")
-        // $(this).removeClass("present"),
-        // $(this).addClass("future"),
         $(this).addClass("past");
     }
 }
@@ -98,68 +47,9 @@ $("#time17 .color-block").val(localStorage.getItem("time17"))
 
 
 
-//  function usePlanner() {
-
-//     $(".hour").each(function() {
-//         var currHour = $(this).text();
-//         var currPlan = localStorage.getItem(currHour);
-
-//         // console.log(this);
-//         // console.log(currHour);
-
-//         if(currPlan !== null) {
-//             $(this).siblings(".plan").val(currPlan);
-//         }
-//     });
-// }
-
-// usePlanner();
 
 
-
-
-
-
-
-// })
-
-//     function hourTracker() {
-//         //get current number of hours.
-//         var currentHour = moment().hour(); // use of moment.js
-
-//         // loop over time blocks
-//         $(".time-block").each(function () {
-//             var blockHour = parseInt($(this).attr("id").split("hour")[1]);
-//             console.log( blockHour, currentHour)
-
-//             //check if we've moved past this time, click into css/html given classes of past, present, or future
-//             if (blockHour < currentHour) {
-//                 $(this).addClass("past");
-//                 $(this).removeClass("future");
-//                 $(this).removeClass("present");
-//             }
-//             else if (blockHour === currentHour) {
-//                 $(this).removeClass("past");
-//                 $(this).addClass("present");
-//                 $(this).removeClass("future");
-//             }
-//             else {
-//                 $(this).removeClass("present");
-//                 $(this).removeClass("past");
-//                 $(this).addClass("future");
-//             }
-//         })
-//     }
-//     hourTracker(); //re-run function
-// })
-
-
-
-
-
-
-//html
-
+//psuedo coding
 //Create basic HTML to resemble mockup-using CSS
     //create 9 rows with 3 columns each 
     //use container and row
