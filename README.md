@@ -3,7 +3,7 @@ This is a work day scheduler that shows green if it's future time, red if it's t
 
 ## Screen-Shot
 
-![This photo shows the application in use with things in different rows. It dose not show the coloring because it was after 5 when the photo was captured](./assets/photo1.png)
+![This photo shows the application in use with things in different rows. It dose not show the coloring because it was after 5 when the photo was captured](./photo1.png)
 
 
 
