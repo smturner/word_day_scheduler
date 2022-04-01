@@ -5,14 +5,21 @@ var saveBtn =$(".saveBtn");
 $("#currentDay").text(currentDay.format('dddd, MMMM Do'));
 
 //tells the current hour
-var timeNow= moment().hour();
+// var timeNow= moment().hour();
+var timeNow= 13;
 console.log(timeNow)
- 
+
 //save button which stores the data to the local storage
  $(".saveBtn").on("click", function () {
+     console.log(this)
+     console.log(notevent.target)
     var textValue =$(this).siblings(".color-block").val()
     var timeKey = $(this).parent().attr("id")
+    // var textAreaId = timeKey.split("time")
+    
+    // console.log (textAreaId[1])
     localStorage.setItem(timeKey, textValue)
+    // $(".saveBtn").hover(handlerIn, handlerOut)
  });
 
 
@@ -63,28 +70,30 @@ $("#time17 .color-block").val(localStorage.getItem("time17"))
 //         $(this).removeClass(".past");
 //     }
 // })
-//     $(".color-block").each(function (){
-//         var eachHour =$(this).parent().attr("id")
-//         if (eachHour > timeNow){
-//             console.log ("future")
-//             $(this).removeClass(".present"),
-//             $(this).addClass(".future"),
-//             $(this).removeClass(".past");
-//         }
-//      else if (eachHour === timeNow){
-//          console.log(present)
-//         $(this).addClass("present"),
-//         $(this).removeClass("future"),
-//         $(this).removeClass("past");
-//     }
-//     else if (eachHour<timeNow) {
-//         console.log("past")
-//         $(this).removeClass("present"),
-//         $(this).addClass("future"),
-//         $(this).removeClass("past");
-//     }
-// }
-// )
+    $(".color-block").each(function (){
+        // var eachHour =$(this).parent().attr("id")
+        var timeKey = $(this).parent().attr("id")
+        var eachHour = timeKey.split("time")
+        if (eachHour[1] > timeNow){
+            console.log ("future")
+            // $(this).removeClass(".present"),
+            $(this).addClass("future");
+            // $(this).removeClass(".past");
+        }
+     else if (eachHour[1] == timeNow){
+        //  console.log(present)
+        $(this).addClass("present");
+        // $(this).removeClass("future"),
+        // $(this).removeClass("past");
+    }
+    else if (eachHour[1]<timeNow) {
+        // console.log("past")
+        // $(this).removeClass("present"),
+        // $(this).addClass("future"),
+        $(this).addClass("past");
+    }
+}
+)
 
 
 
@@ -147,88 +156,6 @@ $("#time17 .color-block").val(localStorage.getItem("time17"))
 
 
 
-
-// // var timeBlock= $("hour");
-// // console.log (timeBlock)
-
-// // console.log(saveBtn)
-// // var description= localStorage.getItem("description");
-// // console.log(description);
-
-
-
-
-
-
-
-// // // $(document).ready(function () {
-// // function savedItem() {
-// //     var description = localStorage.getItem ("description");
-// //     localStorage.setItem("event", description)
-// // }
-// //     var saveBtn = $('.saveBtn');
-// //     //   saveBtn.hide();
-// //     $('.saveBtn').click(function (e) {
-// //         saveBtn.animate({
-// //             'opacity': 'toggle'
-// //         });
-// //     // });
-// // });
-// // $(saveBtn).on("click", function saveEvent(){
-// //     alert("helloworld")
-//     // var initials = initialsEl.value.trim();
-//     // if (initials !== "") {
-//     //   var highscores =
-//     //     JSON.parse(localStorage.getItem("highscores")) || [];
-//     //   var newScore = {
-//     //     score: timerSec,
-//     //     initials: initials
-//     //   };
-//     //   highscores.push(newScore);
-//     //   localStorage.setItem("highscores", JSON.stringify(highscores));
-//     //   renderHighScore ()
-//     // }
-//     // })
-
-
-// var timeNow= moment().hour();
-// console.log(timeNow)
-
-// if (timeNow<timeBlock) {
-//     console.log("green")
-
-// }else if (timeNow===timeBlock)
-
-// function setColors()
-   
-    
-// if (timeNow > timeBlock){
-//     console.log(green)
-// }
-    
-// function setColor() {
-//     var b = new Date();
-//     var bNow = b.getHours();
-//     if (bNow >= 9 && bNow < 10) {
-//         taskNineInput.addClass("present")
-//     }
-// } setColor()
-    
-
-
-//if current hour > time block hour set it to past
-    //else if current hour === time block hour set it to present
-    //else set time blocks to future
-
-
-// var saveBtn = $(".saveBtn");
-// saveBtn.on("click", function (){
-//     var text =$(this).siblings(".description").val();
-//     var time =$(this).parent().attr("id");
-// })
-
-//the point of this assignment is using the bootstrap and figuring out the logic for javascript
-// make sure all the links to CDNs are working properly
 
 
 //html

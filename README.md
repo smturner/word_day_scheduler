@@ -3,6 +3,7 @@ This is a work day scheduler that shows green if it's future time, red if it's t
 
 ## Screen-Shot
 
+![This photo shows the application in use with things in different rows. It dose not show the coloring because it was after 5 when the photo was captured]()
 
 
 
@@ -19,5 +20,6 @@ This project has the following features:
 
 ## Links to Application
 
-<a href="">GitHub link </a>
-<a href="">Deployed Application </a>
+<a href="https://github.com/smturner/work_day_scheduler">GitHub link </a>
+
+<a href="https://smturner.github.io/work_day_scheduler/">Deployed Application </a>
