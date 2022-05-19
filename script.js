@@ -9,10 +9,12 @@ var timeNow= moment().hour();
 
 //save button which stores the data to the local storage
  $(".saveBtn").on("click", function () {
-     console.log(this)
-     console.log(notevent.target)
+     console.log("hello")
+    //  console.log(notevent.target)
     var textValue =$(this).siblings(".color-block").val()
+    console.log(textValue)
     var timeKey = $(this).parent().attr("id")    
+    console.log(timeKey)
     localStorage.setItem(timeKey, textValue)
  });
 
